@@ -90,6 +90,15 @@ public class SplashScreen extends CordovaPlugin {
         return drawableId;
     }
 
+    private int getStyleId(String styleName) {
+        int styleId = 0;
+        styleId = cordova.getActivity().getResources().getIdentifier(styleName, "style", cordova.getActivity().getClass().getPackage().getName());
+        if (styleId == 0) {
+            styleId = cordova.getActivity().getResources().getIdentifier(styleName, "style", cordova.getActivity().getPackageName());
+        }
+        return styleId;
+    }
+
     @Override
     protected void pluginInitialize() {
         if (HAS_BUILT_IN_SPLASH_SCREEN) {
@@ -301,7 +310,8 @@ public class SplashScreen extends CordovaPlugin {
                 splashImageView.setMinimumWidth(display.getWidth());
 
                 // TODO: Use the background color of the webView's parent instead of using the preference.
-                splashImageView.setBackgroundColor(preferences.getInteger("backgroundColor", Color.BLACK));
+                // splashImageView.setBackgroundColor(preferences.getInteger("backgroundColor", Color.BLACK));
+                splashImageView.setBackgroundColor(Color.parseColor(preferences.getString("StatusBarBackgroundColor", "#4DA20A")));
 
                 if (isMaintainAspectRatio()) {
                     // CENTER_CROP scale mode is equivalent to CSS "background-size:cover"
@@ -313,7 +323,8 @@ public class SplashScreen extends CordovaPlugin {
                 }
 
                 // Create and show the dialog
-                splashDialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+                //splashDialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+                splashDialog = new Dialog(context, getStyleId("ITSTheme"));
                 // check to see if the splash screen should be full screen
                 if ((cordova.getActivity().getWindow().getAttributes().flags & WindowManager.LayoutParams.FLAG_FULLSCREEN)
                         == WindowManager.LayoutParams.FLAG_FULLSCREEN) {
