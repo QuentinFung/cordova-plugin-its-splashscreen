@@ -1,54 +1,23 @@
 {
-  "name": "cordova-plugin-splashscreen",
-  "version": "5.0.3-dev",
-  "description": "Cordova Splashscreen Plugin",
-  "types": "./types/index.d.ts",
-  "cordova": {
-    "id": "cordova-plugin-splashscreen",
-    "platforms": [
-      "android",
-      "ubuntu",
-      "ios",
-      "windows",
-      "browser"
-    ]
-  },
+  "name": "cordova-plugin-its-splashscreen",
+  "version": "1.0.0",
+  "description": "Cordova plugin for Splashscreen",
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/apache/cordova-plugin-splashscreen"
-  },
-  "bugs": {
-    "url": "https://issues.apache.org/jira/browse/CB"
+    "url": "git+https://github.com/QuentinFung/cordova-plugin-its-splashscreen.git"
   },
   "keywords": [
     "cordova",
     "splashscreen",
-    "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios",
-    "cordova-windows"
+    "android",
+    "ios",
+    "plugin"
   ],
-  "scripts": {
-    "test": "npm run jshint",
-    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
+  "author": "Quentin Fung <quentin.fung@hku.hk>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/QuentinFung/cordova-plugin-its-splashscreen/issues"
   },
-  "engines": {
-    "cordovaDependencies": {
-      "2.0.0": {
-        "cordova-android": ">=3.6.0"
-      },
-      "4.0.0": {
-        "cordova-android": ">=3.6.0",
-        "cordova-windows": ">=4.4.0"
-      },
-      "6.0.0": {
-        "cordova": ">100"
-      }
-    }
-  },
-  "author": "Apache Software Foundation",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "jshint": "^2.6.0"
-  }
+  "homepage": "https://github.com/QuentinFung/cordova-plugin-its-splashscreen#readme"
 }
