@@ -8,6 +8,9 @@
     "url": "git+https://github.com/QuentinFung/cordova-plugin-its-splashscreen.git"
   },
   "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
     "cordova",
     "splashscreen",
     "android",
