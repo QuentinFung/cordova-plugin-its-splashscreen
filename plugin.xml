@@ -22,6 +22,13 @@
         <param name="android-package" value="hk.hku.its.splashscreen.SplashScreen"/>
         <param name="onload" value="true"/>
       </feature>
+      <splash density="port-xhdpi" src="src/assets/images/screen/ios/Default@2x~universal~anyany.png" />
+      <preference name="SplashScreen" value="src/assets/images/screen/ios/Default@2x~universal~anyany.png" />
+      <preference name="AutoHideSplashScreen" value="false" />
+      <preference name="SplashShowOnlyFirstTime" value="false" />
+      <preference name="ShowSplashScreenSpinner" value="false" />
+      <preference name="SplashScreenDelay" value="1000" />
+      <preference name="FadeSplashScreen" value="false" />
     </config-file>
 
     <source-file src="src/android/hk/hku/its/splashscreen/SplashScreen.java" target-dir="src/hk/hku/its/splashscreen" />
@@ -36,6 +43,13 @@
         <param name="ios-package" value="CDVSplashScreen"/>
         <param name="onload" value="true"/>
       </feature>
+      <splash src="src/assets/images/screen/ios/Default@2x~universal~anyany.png" />
+      <preference name="SplashScreen" value="src/assets/images/screen/ios/Default@2x~universal~anyany.png" />
+      <preference name="AutoHideSplashScreen" value="false" />
+      <preference name="SplashShowOnlyFirstTime" value="false" />
+      <preference name="ShowSplashScreenSpinner" value="false" />
+      <preference name="SplashScreenDelay" value="1000" />
+      <preference name="FadeSplashScreen" value="false" />
     </config-file>
 
     <header-file src="src/ios/CDVSplashScreen.h" />
@@ -50,27 +64,12 @@
     <js-module src="src/browser/SplashScreenProxy.js" name="SplashScreenProxy">
       <runs />
     </js-module>
+
+    <config-file target="config.xml" parent="/*">
+      <preference name="SplashScreenBackgroundColor" value="#4DA20A" />
+      <preference name="ShowSplashScreen" value="false" />
+    </config-file>
   </platform>
-
-  <config-file target="config.xml" parent="/*/platform[@name='android']">
-    <preference name="SplashScreenBackgroundColor" value="#4DA20A" />
-    <preference name="ShowSplashScreen" value="false" />
-  </config-file>
-
-  <config-file target="config.xml" parent="/*/platform[@name='ios']">
-    <splash src="src/assets/images/screen/ios/Default@2x~universal~anyany.png" />
-    <preference name="SplashScreen" value="src/assets/images/screen/ios/Default@2x~universal~anyany.png" />
-    <preference name="AutoHideSplashScreen" value="false" />
-    <preference name="SplashShowOnlyFirstTime" value="false" />
-    <preference name="ShowSplashScreenSpinner" value="false" />
-    <preference name="SplashScreenDelay" value="1000" />
-    <preference name="FadeSplashScreen" value="false" />
-  </config-file>
-
-  <config-file target="config.xml" parent="/*/platform[@name='browser']">
-    <preference name="SplashScreenBackgroundColor" value="#4DA20A" />
-    <preference name="ShowSplashScreen" value="false" />
-  </config-file>
 
   <resource-file src="Default@2x~universal~anyany.png" target="src/assets/images/screen/ios/Default@2x~universal~anyany.png" />
 </plugin>
