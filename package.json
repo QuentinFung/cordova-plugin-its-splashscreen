@@ -2,7 +2,6 @@
   "name": "cordova-plugin-its-splashscreen",
   "version": "1.0.0",
   "description": "Cordova plugin for Splashscreen",
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QuentinFung/cordova-plugin-its-splashscreen.git"
